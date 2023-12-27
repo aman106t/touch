@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Page Example</title>
+    <link rel="stylesheet" href="style.css">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+
+    <div class="text">
+        <h2>to check the data , please press the button</h2>
+    </div>
+
+
+    <!-- Button to show data from a different site -->
+    <button  class="onclick"  onclick="showData()">Show Data</button>
+    
+  
+    <div id="iframe-container"></div>
+    
+    <!-- JavaScript code to handle button click and show data using an iframe -->
+    <script>
+        function showData() {
+            // Specify the URL of the different site
+            var externalSiteUrl = 'http://10.10.10.10/rawdata.txt';
+    
+            // Create an iframe element
+            var iframe = document.createElement('iframe');
+    
+            // Set the source (URL) of the iframe to the external site
+            iframe.src = externalSiteUrl;
+    
+            // Set the height and width of the iframe (adjust as needed)
+            iframe.style.width = '100%';
+            iframe.style.height = '100px';
+    
+            // Append the iframe to the container
+            document.getElementById('iframe-container').appendChild(iframe);
+        }
+    </script>
+    
+</body>
+</html>
+

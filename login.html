@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Page Example</title>
+    <link rel="stylesheet" href="style.css">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+<div class="text">
+    <pre>In order to login, maximise the window screen and then enter the username and password .
+        Both the logins for user and admin will proceed from this same button . </pre>
+</div>
+<button id="openWindowButton">Login</button>
+
+<script>
+  // Function to open a new window
+  function openNewWindow() {
+    window.open('http://10.10.10.10/cgi-bin/operation/setmacdata.pl', '_blank', 'width=600,height=400');
+  }
+
+  // Add a click event listener to the button
+  document.getElementById('openWindowButton').addEventListener('click', openNewWindow);
+</script>
+
+</body>
+</html>
